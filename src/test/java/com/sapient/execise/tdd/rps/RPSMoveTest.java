@@ -1,5 +1,7 @@
 package com.sapient.execise.tdd.rps;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 
