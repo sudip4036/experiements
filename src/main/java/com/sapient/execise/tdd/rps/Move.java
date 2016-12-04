@@ -1,21 +1,28 @@
 package com.sapient.execise.tdd.rps;
 
-public class Move {
+/**
+ * This class defines moves of the Game and identify if one player's moove beats another player's move
+ * 
+ * @author sdas14
+ *
+ */
+public enum Move {
+	ROCK, PAPER, SCISSORS;
 	
-	private String move;
-	 
-	public Move(String move) {
-		this.move = move;
-	}
-
-	public boolean beats(String anotherMove) {
-		switch(move){
-		case "ROCK":
-            return anotherMove == "SCISSORS";
-		case "PAPER":
-            return anotherMove == "ROCK";
-		case "SCISSORS":
-            return anotherMove == "PAPER";
+	/**
+	 * This function define a Move  beats another Move
+	 * 
+	 * @param another
+	 * @return
+	 */
+	public boolean beats(Move anotherMove) {
+		switch(this){
+			case ROCK:
+				return anotherMove == SCISSORS;
+			case PAPER:
+				return anotherMove == ROCK;
+			case SCISSORS:
+				return anotherMove == PAPER;
 		}
 		return false;
 	}
