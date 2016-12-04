@@ -14,6 +14,8 @@ public class Move {
             return anotherMove == "SCISSORS";
 		case "PAPER":
             return anotherMove == "ROCK";
+		case "SCISSORS":
+            return anotherMove == "PAPER";
 		}
 		return false;
 	}
