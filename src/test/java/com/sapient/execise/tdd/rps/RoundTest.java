@@ -1,0 +1,23 @@
+package com.sapient.execise.tdd.rps;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+/**
+ * This test class helps to identify the winner of a game based on the move
+ * @author sdas14
+ *
+ */
+public class RoundTest {
+	
+	   @Test
+	   public void testPlayerAWinner() throws Exception {
+		   Move moveByPlayerA = Move.PAPER;
+		   Move moveByPlayerB = Move.SCISSORS;
+		   Round round = new Round(Move moveByPlayerA, Move moveByPlayerB);
+		   String player = round.getWinner();
+		   assertEquals(player, "A");
+	   }
+
+}
