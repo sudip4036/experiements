@@ -14,5 +14,12 @@ public class PerfectNumberTest {
 		boolean isPerfect = perfectNumber.isValidPerfectNumber(6);
 		assertEquals(isPerfect,true);
 	}
+	
+	@Test
+	public void testNotPerfectNumber() throws Exception {
+		PerfectNumber perfectNumber = new PerfectNumber();
+		boolean isPerfect = perfectNumber.isValidPerfectNumber(7);
+		assertEquals(isPerfect,false);
+	}
 
 }
