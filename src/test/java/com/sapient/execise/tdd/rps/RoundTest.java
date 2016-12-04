@@ -13,8 +13,8 @@ public class RoundTest {
 	
 	   @Test
 	   public void testPlayerAWinner() throws Exception {
-		   Move moveByPlayerA = Move.PAPER;
-		   Move moveByPlayerB = Move.SCISSORS;
+		   Move moveByPlayerA = Move.SCISSORS;
+		   Move moveByPlayerB = Move.PAPER;
 		   Round round = new Round(Move moveByPlayerA, Move moveByPlayerB);
 		   String player = round.getWinner();
 		   assertEquals(player, "A");
