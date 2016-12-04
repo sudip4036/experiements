@@ -18,8 +18,8 @@ public class RPSMoveTest {
 	   
 	   @Test
 	   public void testPaperBeatsRocks() throws Exception {
-		   Move move = new Move("PAPER");
-		   boolean isWinner = move.beats("ROCK");
+		   Move move = Move.valueOf("PAPER");
+		   boolean isWinner = move.beats(Move.valueOf("ROCK"));
 		   assertEquals(isWinner, true);
 		   
 	   }
@@ -31,15 +31,7 @@ public class RPSMoveTest {
 		   assertEquals(isWinner, true);
 		   
 	   }
-	   
-	   @Test
-	   public void testInvalidInput() throws Exception {
-		   Move move = Move.valueOf("ABC");
-		   boolean isWinner = move.beats(Move.valueOf("XYZ"));
-		   assertEquals(isWinner, false);
-		   
-	   }
-	   
+
 	   @Test
 	   public void testTieInput() throws Exception {
 		   Move move = Move.valueOf("PAPER");
