@@ -39,4 +39,12 @@ public class RPSMoveTest {
 		   assertEquals(isWinner, false);
 		   
 	   }
+	   
+	   @Test
+	   public void testTieInput() throws Exception {
+		   Move move = new Move("PAPER");
+		   boolean isWinner = move.beats("PAPER");
+		   assertEquals(isWinner, false);
+		   
+	   }
 }
