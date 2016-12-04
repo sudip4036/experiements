@@ -3,7 +3,7 @@ package com.sapient.execise.tdd.rps;
 public class Move {
 	
 	private String move;
-	
+	 
 	public Move(String move) {
 		this.move = move;
 	}
