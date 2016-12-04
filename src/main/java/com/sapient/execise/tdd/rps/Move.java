@@ -23,8 +23,10 @@ public enum Move {
 				return anotherMove == ROCK;
 			case SCISSORS:
 				return anotherMove == PAPER;
+			default:
+				return false;
 		}
-		return false;
+		
 	}
 
 }
