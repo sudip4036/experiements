@@ -12,6 +12,8 @@ public class Move {
 		switch(move){
 		case "ROCK":
             return anotherMove == "SCISSORS";
+		case "PAPER":
+            return anotherMove == "ROCK";
 		}
 		return false;
 	}
