@@ -25,7 +25,8 @@ public class RoundTest {
 	   public static Iterable<Object[]> testData() {
 	    	return Arrays.asList(new Object[][] {
 	             { Move.ROCK, Move.SCISSORS, "A" },{ Move.PAPER, Move.ROCK, "A" }, { Move.SCISSORS, Move.PAPER, "A" },
-	             { Move.ROCK, Move.PAPER, "B"},{ Move.PAPER, Move.SCISSORS, "B" },{ Move.SCISSORS, Move.ROCK, "B"},});
+	             { Move.ROCK, Move.PAPER, "B"},{ Move.PAPER, Move.SCISSORS, "B" },{ Move.SCISSORS, Move.ROCK, "B"},
+	             { Move.ROCK, Move.ROCK, "Tie" },{ Move.PAPER, Move.PAPER ,"Tie" },{ Move.SCISSORS, Move.SCISSORS,"Tie"},});
 	   }
 	   
 	   @Parameter(0)
