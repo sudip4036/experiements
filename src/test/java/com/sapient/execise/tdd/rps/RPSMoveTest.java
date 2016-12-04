@@ -31,4 +31,12 @@ public class RPSMoveTest {
 		   assertEquals(isWinner, true);
 		   
 	   }
+	   
+	   @Test
+	   public void testInvalidInput() throws Exception {
+		   Move move = new Move("ABC");
+		   boolean isWinner = move.beats("XYZ");
+		   assertEquals(isWinner, false);
+		   
+	   }
 }
