@@ -23,7 +23,7 @@ public class PerfectNumber {
             }
         }
 		//Verify if sum of all its divisors is equal to the number
-        if(number == sum)
+        if((sum !=1) && (number == sum)) 
 			return true;
 		
 			return false;

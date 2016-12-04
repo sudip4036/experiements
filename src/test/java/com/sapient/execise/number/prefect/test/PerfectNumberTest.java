@@ -19,7 +19,7 @@ public class PerfectNumberTest {
 	   public static Iterable<Object[]> testData() {
 	    	return Arrays.asList(new Object[][] {
 	             {6,true}, {28,true}, {496,true}, {8128,true},
-	             {1,false}, {29,false}, {42,false}, {8000,false},{365,false}, });
+	             {1,false}, {29,false}, {42,false}, {8000,false},{365,false},{-6,false}, });
 	    }
 	   
 
