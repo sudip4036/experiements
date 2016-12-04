@@ -19,12 +19,13 @@ public class Round {
 	}
 
 	/**
-	 * This method identifies who is the winner.
+	 * This method identifies who is the winner. If both the player choose same entry then it decides Tie.
 	 * 
-	 * @return Player if there is winner
+	 * @return Player if there is winner otherwise "Tie"
 	 */
 	public String getWinner() {
-		return moveByPlayerA.beats(moveByPlayerB) ? "A" : "B";
+		return moveByPlayerA == moveByPlayerB ? "Tie" : 
+			moveByPlayerA.beats(moveByPlayerB) ? "A" : "B";
 	}
 
 }
