@@ -15,4 +15,12 @@ public class RPSMoveTest {
 		   assertEquals(isWinner, true);
 		   
 	   }
+	   
+	   @Test
+	   public void testPaperBeatsRocks() throws Exception {
+		   Move move = new Move("PAPER");
+		   boolean isWinner = move.beats("ROCK");
+		   assertEquals(isWinner, true);
+		   
+	   }
 }
