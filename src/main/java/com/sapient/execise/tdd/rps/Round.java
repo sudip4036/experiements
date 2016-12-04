@@ -1,5 +1,6 @@
 package com.sapient.execise.tdd.rps;
 
+
 import com.sapient.execise.tdd.rps.Move;
 
 /**
@@ -23,8 +24,7 @@ public class Round {
 	 * @return Player if there is winner
 	 */
 	public String getWinner() {
-		// TODO Auto-generated method stub
-		return null;
+		return moveByPlayerA.beats(moveByPlayerB) ? "A" : "B";
 	}
 
 }
