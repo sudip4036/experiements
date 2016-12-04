@@ -11,7 +11,6 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import com.sapient.execise.number.prefect.PerfectNumber;
-import com.sapient.execise.rps.game.Move;
 
 @RunWith(Parameterized.class)
 public class PerfectNumberTest {
@@ -19,24 +18,21 @@ public class PerfectNumberTest {
 	@Parameters
 	   public static Iterable<Object[]> testData() {
 	    	return Arrays.asList(new Object[][] {
-	             {6}, {28}, {496}, {8128}, });
+	             {6,true}, {28,true}, {496,true}, {8128,true},
+	             {1,false}, {29,false}, {42,false}, {8000,false},{365,false}, });
 	    }
 	   
+
  @Parameter(0)
  public int     number;
+ @Parameter(1)
+ public boolean     expectedResult;
  
 	@Test
 	public void testPerfectNumber() throws Exception {
 		PerfectNumber perfectNumber = new PerfectNumber();
 		boolean isPerfect = perfectNumber.isValidPerfectNumber(number);
-		assertEquals(isPerfect,true);
+		assertEquals(isPerfect,expectedResult);
 	}
 	
-	@Test
-	public void testNotPerfectNumber() throws Exception {
-		PerfectNumber perfectNumber = new PerfectNumber();
-		boolean isPerfect = perfectNumber.isValidPerfectNumber(7);
-		assertEquals(isPerfect,false);
-	}
-
 }
