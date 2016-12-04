@@ -4,7 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-
+/**
+ * This class test which move is the winner
+ * 
+ * @author sdas14
+ *
+ */
 
 public class RPSMoveTest {
 
