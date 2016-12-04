@@ -13,16 +13,17 @@ import org.junit.runners.Parameterized.Parameters;
 
 import com.sapient.execise.rps.player.Player;
 
+import junit.framework.Assert;
+
 
 @RunWith(Parameterized.class)
 public class RoundTest {
 
 	@Parameters
 	   public static Iterable<Object[]> testData() {
-	    	return Arrays.asList(new Object[][] { { Move.ROCK, Move.ROCK, null },
+	    	return Arrays.asList(new Object[][] {
 	             { Move.ROCK, Move.PAPER, Player.B }, { Move.ROCK, Move.SCISSORS, Player.A },
-	             { Move.PAPER, Move.PAPER, Optional.empty() }, { Move.PAPER, Move.ROCK, Player.A },
-	             { Move.PAPER, Move.SCISSORS, Player.B }, { Move.SCISSORS, Move.SCISSORS, Optional.empty() },
+	             { Move.PAPER, Move.ROCK, Player.A },{ Move.PAPER, Move.SCISSORS, Player.B }, 
 	             { Move.SCISSORS, Move.ROCK, Player.B }, { Move.SCISSORS, Move.PAPER, Player.A }, });
 	    }
     @Parameter(0)
@@ -34,6 +35,16 @@ public class RoundTest {
     @Parameter(2)
     public Player   expectedResult;
 
+    /**
+     * Test method for
+     * {@link Game#evaluateMoves(Move, Move)}
+     * .
+     */
+   @Test
+   public void testRoundObject() throws Exception {
+	   Round round = new Round(moveA, moveB);
+	   Assert.assertNotNull(round);
+   }
     /**
      * Test method for
      * {@link Game#evaluateMoves(Move, Move)}
